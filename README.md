@@ -13,9 +13,6 @@ The official implementation of TREG using PyTorch.
 * [Installation](#installation)
 * [Training](#training)
 * [Test and evaluation](#test-and-evaluation)
-* [Results](#results)
-* [Acknowledgments](#acknowledgments)
-* [Contributors](#Contributors)
 * [Citation](#Citation)
 
 ## Overview
