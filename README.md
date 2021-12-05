@@ -31,12 +31,7 @@ make sure you have installed conda with python 3.7 and cuda10.0. And our platfor
 
 ## Training
 We use [Lasot](https://cis.temple.edu/lasot/), [GOT-10k](http://got-10k.aitestunion.com), [TrackingNet](https://tracking-net.org) 
-and [COCO](http://cocodataset.org/#home) to train TREG. 
-Before running the training scripts, you should download the datasets and set the correct datasets path in `ltr/admin/local.py`. 
-Also remember to download the pretrained [SuperDimp50] 
-model to initialize the backbone and classification-18 branch of fcot. 
-Then switch to your conda environment using `conda activate $YOUR_CONDA_ENVIRONMENT`.
-The training scripts can be found at [bash](bash) folder. 
+and [COCO](http://cocodataset.org/#home) to train TREG.
 ```
 cd bash
 ./train_treg.sh
@@ -49,7 +44,7 @@ In the pytracking directory, you can test trackers on a set of datasets and use 
 
 ```
 cd bash
-./run_fcot_on_otb.sh
+./run_treg_on_otb.sh
 ```
 
 See scripts under `bin` for the more supported datasets.
@@ -58,16 +53,16 @@ See scripts under `bin` for the more supported datasets.
 
 ```
 cd bash
-./eval_fcot_on_otb.sh
+./eval_treg_on_otb.sh
 ```
 
 See scripts under `bin` for the more scripts to evaluate on other datasets.
 
-For **GOT-10k**, **TrackingNet**, you need to evaluate results on official server, we provide tools to pack tracking results into the zipfile of submission format. Also, put the tracking results under `results_path/fcot`, you can use the script to pack trackingnet results:
+For **GOT-10k**, **TrackingNet**, you need to evaluate results on official server, we provide tools to pack tracking results into the zipfile of submission format. Also, put the tracking results under `results_path/treg`, you can use the script to pack trackingnet results:
 
 ```
 cd bash
-./pack_fcot_results_on_tn.sh
+./pack_results_on_tn.sh
 ```
 
 The packed zipfile can be found in the path `packed_results_path` that you set in local.py.
